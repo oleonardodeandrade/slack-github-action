@@ -1,0 +1,10 @@
+{
+  "name": "slack-github-action",
+  "version": "0.1.0",
+  "description": "Custom GitHub Action to notify Slack about pull request events",
+  "main": "notify.js",
+  "scripts": {
+    "start": "node notify.js"
+  },
+  "license": "MIT"
+}
