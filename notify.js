@@ -4,7 +4,7 @@ const token = process.env.SLACK_API_TOKEN;
 const channel = process.env.SLACK_CHANNEL;
 
 if (!token || !channel) {
-  console.error('SLACK_TOKEN and SLACK_CHANNEL environment variables are required');
+  console.error('SLACK_API_TOKEN and SLACK_CHANNEL environment variables are required');
   process.exit(1);
 }
 

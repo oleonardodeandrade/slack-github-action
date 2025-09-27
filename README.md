@@ -23,11 +23,11 @@ This repository contains a **custom GitHub Action** that sends notifications to 
 
 1. Set up your Slack app and get a Bot User OAuth Token
 2. Add the following secrets to your GitHub repository:
-   - `SLACK_TOKEN`: Your Slack Bot User OAuth Token
+   - `SLACK_API_TOKEN`: Your Slack Bot User OAuth Token
    - `SLACK_CHANNEL`: The ID of the Slack channel to post notifications to
 
 3. Add this workflow to your repository:
-```yaml
+```
 name: Notify Slack on PR Events
 
 on:
@@ -42,7 +42,7 @@ jobs:
       - name: Notify Slack
         uses: leonardoandrade/slack-github-action@v1
         with:
-          slack-token: ${{ secrets.SLACK_TOKEN }}
+          slack-api-token: ${{ secrets.SLACK_API_TOKEN }}
           slack-channel: ${{ secrets.SLACK_CHANNEL }}
 ```
 
@@ -51,7 +51,7 @@ jobs:
 To test the script locally, you need to set the required environment variables:
 
 ```bash
-SLACK_TOKEN=your-token SLACK_CHANNEL=your-channel yarn start
+SLACK_API_TOKEN=your-token SLACK_CHANNEL=your-channel yarn start
 ```
 
 Note: For security reasons, never commit your actual tokens to the repository.
