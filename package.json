@@ -1,10 +1,25 @@
 {
   "name": "slack-github-action",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Custom GitHub Action to notify Slack about pull request events",
   "main": "notify.js",
   "scripts": {
-    "start": "node notify.js"
+    "start": "node notify.js",
+    "test:local": "node test-local.js"
   },
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonardoandrade/slack-github-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "slack",
+    "notifications"
+  ],
+  "author": "Leonardo Andrade",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/web-api": "^7.10.0"
+  }
 }
